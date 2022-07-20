@@ -5,6 +5,19 @@ public class Pessoa {
     private char sexo;
     private String localNascimento;
     private String dataNascimento;
+    
+    @Override
+    public String toString() {
+        return "Pessoa{" + "nome=" + nome + ", sexo=" + sexo + ", localNascimento=" + localNascimento + ", dataNascimento=" + dataNascimento + '}';
+    }
+    
+    public void setSexo(char sexo){
+        this.sexo = sexo;
+    }
+
+    public char getsexo(){
+        return this.getSexo();
+    }
 
     public String getNome() {
         return nome;
@@ -16,10 +29,6 @@ public class Pessoa {
 
     public char getSexo() {
         return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
     }
 
     public String getLocalNascimento() {
@@ -37,6 +46,4 @@ public class Pessoa {
     public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-    
-    
 }
