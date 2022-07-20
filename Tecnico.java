@@ -5,6 +5,11 @@ public class Tecnico extends Pessoa {
     private String empresa;
     private int num_contrato;
 
+    @Override
+    public String toString() {
+        return super.toString() + "Tecnico{" + "cargo=" + cargo + ", empresa=" + empresa + ", num_contrato=" + num_contrato + '}';
+    }
+
     public String getCargo() {
         return cargo;
     }
