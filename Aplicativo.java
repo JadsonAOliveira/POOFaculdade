@@ -1,4 +1,3 @@
-
 package br.edu.ifs.academico;
 import java.util.Scanner;
 
@@ -120,48 +119,31 @@ public class Aplicativo {
                 case 11:
                     System.out.println("Listar Alunos");
                     for(int i = 0; i < contAluno; i++){
-                        System.out.println(alunos[i].getNome());
-                        System.out.println(alunos[i].getSexo());
-                        System.out.println(alunos[i].getDataNascimento());
-                        System.out.println(alunos[i].getLocalNascimento());
+                        System.out.println(alunos[i].toString());
                     }
                     break;
                 case 12:
                     System.out.println("Listar Professores");
                     for(int i = 0; i < contProfessor; i++){
-                        System.out.println("Nome: " + professores[i].getNome());
-                        System.out.println("Sexo: " + professores[i].getSexo());
-                        System.out.println("Data de Nascimento: " + professores[i].getDataNascimento());
-                        System.out.println("Local de Nascimento: " + professores[i].getLocalNascimento());
-                        System.out.println("Formacao: " + professores[i].getFormacao());
+                        System.out.println(professores[i].toString());
                     }
                     break;
                 case 13:
                     System.out.println("Listar Psicologos");
                     for(int i = 0; i < contPsicologo; i++){
-                        System.out.println("Nome: " + psicologos[i].getNome());
-                        System.out.println("Sexo: " + psicologos[i].getSexo());
-                        System.out.println("Data de Nascimento: " + psicologos[i].getDataNascimento());
-                        System.out.println("Local de Nascimento: " + psicologos[i].getLocalNascimento());
-                        System.out.println("Carga Horaria: " + psicologos[i].getCarga_horaria() + " Horas");
+                        System.out.println(psicologos[i].toString());
                     }
                     break;
                 case 14:
                     System.out.println("Listar Tecnicos");
                     for(int i = 0; i < contTecnico; i++){
-                        System.out.println("Nome: " + tecnicos[i].getNome());
-                        System.out.println("Sexo: " + tecnicos[i].getSexo());
-                        System.out.println("Data de Nascimento: " + tecnicos[i].getDataNascimento());
-                        System.out.println("Local de Nascimento: " + tecnicos[i].getLocalNascimento());
-                        System.out.println("Cargo: " + tecnicos[i].getCargo());
-                        System.out.println("Empresa: " + tecnicos[i].getEmpresa());
-                        System.out.println("Numero de Contrato: " + tecnicos[i].getNum_contrato());
+                        System.out.println(tecnicos[i].toString());
                     }
                     break;
                 case 0:
                     break;
                 default:
-                    System.out.println("Digite uma opcaoo valida");
+                    System.out.println("Digite uma opcao valida");
             }
 
             System.out.println(menu.getMenu());
