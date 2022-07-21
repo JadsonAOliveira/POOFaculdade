@@ -1,16 +1,16 @@
 package br.edu.ifs.academico;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aplicativo {
     public static void main(String[] args) {
 
         Scanner leitura = new Scanner(System.in);
-        Aluno[] alunos = new Aluno[10];
-        Professor[] professores = new Professor[10];
-        Psicologo[] psicologos = new Psicologo[10];
-        Tecnico[] tecnicos = new Tecnico[10];
+        ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+        ArrayList<Professor> professores = new ArrayList<Professor>();
+        ArrayList<Psicologo> psicologos = new ArrayList<Psicologo>();
+        ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
 
-        int contAluno = 0, contProfessor = 0, contPsicologo = 0, contTecnico = 0;
         String nome, dataNascimento, localNascimento;
         char sexo;
 
@@ -37,9 +37,8 @@ public class Aplicativo {
                     System.out.println("Local de Nascimento");
                     localNascimento = leitura.next();
                     aluno.setLocalNascimento(localNascimento);
-
-                    alunos[contAluno] = aluno;
-                    contAluno++;
+                    
+                    alunos.add(aluno);                  
                     break;
                 case 2:
                     System.out.println("Cadastrar Professor");
@@ -60,8 +59,7 @@ public class Aplicativo {
                     String formacao = leitura.next();
                     professor.setFormacao(formacao);
 
-                    professores[contProfessor] = professor;
-                    contProfessor++;
+                    professores.add(professor); 
                     break;
                 case 3:
                     System.out.println("Cadastrar Psicologo");
@@ -85,8 +83,7 @@ public class Aplicativo {
                     int numero_conselho = leitura.nextInt();
                     psicologo.setNumero_conselho(numero_conselho);
 
-                    psicologos[contPsicologo] = psicologo;
-                    contPsicologo++;
+                    psicologos.add(psicologo); 
                     break;
                 case 4:
                     System.out.println("Cadastrar Tecnico");
@@ -113,32 +110,23 @@ public class Aplicativo {
                     int num_contrato = leitura.nextInt();
                     tecnico.setNum_contrato(num_contrato);
 
-                    tecnicos[contTecnico] = tecnico;
-                    contTecnico++;
+                    tecnicos.add(tecnico); 
                     break;
                 case 11:
                     System.out.println("Listar Alunos");
-                    for(int i = 0; i < contAluno; i++){
-                        System.out.println(alunos[i].toString());
-                    }
+                    System.out.println(alunos.toString());
                     break;
                 case 12:
                     System.out.println("Listar Professores");
-                    for(int i = 0; i < contProfessor; i++){
-                        System.out.println(professores[i].toString());
-                    }
+                    System.out.println(professores.toString());
                     break;
                 case 13:
                     System.out.println("Listar Psicologos");
-                    for(int i = 0; i < contPsicologo; i++){
-                        System.out.println(psicologos[i].toString());
-                    }
+                    System.out.println(psicologos.toString());
                     break;
                 case 14:
                     System.out.println("Listar Tecnicos");
-                    for(int i = 0; i < contTecnico; i++){
-                        System.out.println(tecnicos[i].toString());
-                    }
+                    System.out.println(tecnicos.toString());
                     break;
                 case 0:
                     break;
