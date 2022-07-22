@@ -10,6 +10,8 @@ public class Aplicativo {
         ArrayList<Professor> professores = new ArrayList<Professor>();
         ArrayList<Psicologo> psicologos = new ArrayList<Psicologo>();
         ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
+        ArrayList<Inspetor> inspetores = new ArrayList<Inspetor>();
+        ArrayList<Avaliador> avaliadores = new ArrayList<Avaliador>();
 
         String nome, dataNascimento, localNascimento;
         char sexo;
@@ -37,6 +39,13 @@ public class Aplicativo {
                     System.out.println("Local de Nascimento");
                     localNascimento = leitura.next();
                     aluno.setLocalNascimento(localNascimento);
+                    System.out.println("Notas");
+                    double nota1 = leitura.nextInt();
+                    aluno.setNota1(nota1);
+                    double nota2 = leitura.nextInt();
+                    aluno.setNota2(nota2);
+                    double nota3 = leitura.nextInt();
+                    aluno.setNota3(nota3);
                     
                     alunos.add(aluno);                  
                     break;
@@ -112,6 +121,54 @@ public class Aplicativo {
 
                     tecnicos.add(tecnico); 
                     break;
+                case 5:
+                	System.out.println("Cadastrar Inspetor");
+                	Inspetor inspetor = new Inspetor();
+                	System.out.println("Nome");
+                	nome = leitura.next();
+                	inspetor.setNome(nome);
+                	System.out.println("Sexo");
+                	sexo = leitura.next().charAt(0);
+                	inspetor.setSexo(sexo);
+                	System.out.println("Data de Nascimento");
+                	dataNascimento = leitura.next();
+                	inspetor.setDataNascimento(dataNascimento);
+                	System.out.println("Local de Nascimento");
+                	localNascimento = leitura.next();
+                	inspetor.setLocalNascimento(localNascimento);
+                	System.out.println("Cidade de atuacao");
+                	String cidade = leitura.next();
+                	inspetor.setCidade(cidade);
+                	System.out.println("Nivel");
+                	int nivel = leitura.nextInt();
+                	inspetor.setNivel(nivel);
+                	
+                	inspetores.add(inspetor);
+                	break;
+                case 6:
+                	System.out.println("Cadastrar Avaliador");
+                	Avaliador avaliador = new Avaliador();
+                	System.out.println("Nome");
+                	nome = leitura.next();
+                	avaliador.setNome(nome);
+                	System.out.println("Sexo");
+                	sexo = leitura.next().charAt(0);
+                	avaliador.setSexo(sexo);
+                	System.out.println("Data de Nascimento");
+                	dataNascimento = leitura.next();
+                	avaliador.setDataNascimento(dataNascimento);               	
+                	System.out.println("Local de Nascimento");
+                	localNascimento = leitura.next();
+                	avaliador.setLocalNascimento(localNascimento);
+                	System.out.println("Quantidade de bancas");
+                	int qtd_bancas = leitura.nextInt();
+                	avaliador.setQtd_bancas(qtd_bancas);
+                	System.out.println("Area de atuacao");
+                	String area_atuacao = leitura.next();
+                	avaliador.setArea_atuacao(area_atuacao);
+                	
+                	avaliadores.add(avaliador);
+                	break;
                 case 11:
                     System.out.println("Listar Alunos");
                     System.out.println(alunos.toString());
@@ -128,6 +185,14 @@ public class Aplicativo {
                     System.out.println("Listar Tecnicos");
                     System.out.println(tecnicos.toString());
                     break;
+                case 15:
+                	System.out.println("Listar Inspetores");
+                	System.out.println(inspetores.toString());
+                	break;
+                case 16:
+                	System.out.println("Listar Avaliadores");
+                	System.out.println(avaliadores.toString());
+                	break;
                 case 0:
                     break;
                 default:
