@@ -3,6 +3,10 @@ package br.edu.ifs.academico;
 public class Avaliador extends Pessoa {
 	private int qtd_bancas;
 	private String area_atuacao;
+
+    public Avaliador(long cpf) {
+        super(cpf);
+    }
 	
 	@Override
 	public String toString() {
@@ -20,5 +24,4 @@ public class Avaliador extends Pessoa {
 	public void setArea_atuacao(String area_atuacao) {
 		this.area_atuacao = area_atuacao;
 	}
-
 }
