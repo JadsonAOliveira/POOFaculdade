@@ -3,6 +3,10 @@ package br.edu.ifs.academico;
 public class Inspetor extends Pessoa {
 	private String cidade;
 	private int nivel;
+
+    public Inspetor(long cpf) {
+        super(cpf);
+    }
 	
 	@Override
 	public String toString() {
