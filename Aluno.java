@@ -5,6 +5,10 @@ public class Aluno extends Pessoa {
     private double nota2;
     private double nota3;
 
+    public Aluno(long cpf) {
+        super(cpf);
+    }
+
     @Override
     public String toString() {
         return super.toString() + "Aluno{" + "nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + '}';
