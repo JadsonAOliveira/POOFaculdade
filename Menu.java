@@ -9,6 +9,8 @@ public abstract class Menu {
                 + "02 - Cadastrar Professor \n"
                 + "03 - Cadastrar Psicólogo \n"
                 + "04 - Cadastrar Técnico \n"
+                + "05 - Cadastrar Avaliador \n"
+                + "06 - Cadastrar Inspetor \n"
                 + "\n"
                 + "11 - Listar Alunos \n"
                 + "12 - Listar Professores \n"
