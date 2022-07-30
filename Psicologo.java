@@ -10,7 +10,7 @@ public class Psicologo extends Pessoa{
 
     @Override
     public String toString() {
-        return "Psicologo{" + "carga_horaria=" + carga_horaria + ", numero_conselho=" + numero_conselho + '}';
+    	return super.toString() + " Psicologo{" + "carga_horaria=" + carga_horaria + ", numero_conselho=" + numero_conselho + '}';
     }
 
     public int getCarga_horaria() {
