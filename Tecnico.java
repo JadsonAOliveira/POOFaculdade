@@ -11,7 +11,7 @@ public class Tecnico extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "Tecnico{" + "cargo=" + cargo + ", empresa=" + empresa + ", num_contrato=" + num_contrato + '}';
+        return super.toString() + " Tecnico{" + "cargo=" + cargo + ", empresa=" + empresa + ", num_contrato=" + num_contrato + '}';
     }
 
     public String getCargo() {
