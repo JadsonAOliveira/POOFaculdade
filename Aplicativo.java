@@ -16,10 +16,10 @@ public class Aplicativo {
 
         String nome, dataNascimento, localNascimento;
         char sexo;
-        long cpf = 0;
+        long cpf;
 
-        Menu.getMenu();
-        //System.out.println(menu.getMenu());
+        Menu menu = new Menu();
+        System.out.println(menu.getMenu());
 
         int opcao = leitura.nextInt();
 
@@ -27,7 +27,9 @@ public class Aplicativo {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Cadastrar Aluno");                
+                    System.out.println("Cadastrar Aluno");
+                    System.out.println("CPF");
+                    cpf = leitura.nextLong(); 
                     Aluno aluno = new Aluno(cpf);                                                        
                     System.out.println("Nome");
                     nome = leitura.next();
@@ -53,6 +55,8 @@ public class Aplicativo {
                     break;
                 case 2:
                     System.out.println("Cadastrar Professor");
+                    System.out.println("CPF");
+                    cpf = leitura.nextLong();
                     Professor professor = new Professor(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
@@ -74,6 +78,8 @@ public class Aplicativo {
                     break;
                 case 3:
                     System.out.println("Cadastrar Psicologo");
+                    System.out.println("CPF");
+                    cpf = leitura.nextLong();
                     Psicologo psicologo = new Psicologo(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
@@ -98,6 +104,8 @@ public class Aplicativo {
                     break;
                 case 4:
                     System.out.println("Cadastrar Tecnico");
+                    System.out.println("CPF");
+                    cpf = leitura.nextLong();
                     Tecnico tecnico = new Tecnico(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
@@ -125,6 +133,8 @@ public class Aplicativo {
                     break;
                 case 5:
                 	System.out.println("Cadastrar Inspetor");
+                	System.out.println("CPF");
+                    cpf = leitura.nextLong();
                 	Inspetor inspetor = new Inspetor(cpf);
                 	System.out.println("Nome");
                 	nome = leitura.next();
@@ -149,6 +159,8 @@ public class Aplicativo {
                 	break;
                 case 6:
                 	System.out.println("Cadastrar Avaliador");
+                	System.out.println("CPF");
+                    cpf = leitura.nextLong();
                 	Avaliador avaliador = new Avaliador(cpf);
                 	System.out.println("Nome");
                 	nome = leitura.next();
@@ -173,6 +185,8 @@ public class Aplicativo {
                 	break;
                 case 7:
                 	System.out.println("Cadastrar Aluno Assistido");
+                	System.out.println("CPF");
+                    cpf = leitura.nextLong();
                 	AlunoAssistido alunoAssistido = new AlunoAssistido(cpf);
                 	System.out.println("Nome");
                 	nome = leitura.next();
@@ -238,8 +252,7 @@ public class Aplicativo {
                     System.out.println("Digite uma opcao valida");
             }
 
-            Menu.getMenu();
-            //System.out.println(menu.getMenu());
+            System.out.println(menu.getMenu());
             opcao = leitura.nextInt();
         }
         System.out.println("Programa encerrado");
