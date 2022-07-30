@@ -10,7 +10,7 @@ public class Inspetor extends Pessoa {
 	
 	@Override
 	public String toString() {
-		return super.toString() + "Inspetor [cidade=" + cidade + ", nivel=" + nivel + "]";
+		return super.toString() + " Inspetor [cidade=" + cidade + ", nivel=" + nivel + "]";
 	}
 	public String getCidade() {
 		return cidade;
