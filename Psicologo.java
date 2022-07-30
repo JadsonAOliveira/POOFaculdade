@@ -26,6 +26,7 @@ public class Psicologo extends Pessoa{
     public int getNumero_conselho(){
         return numero_conselho;
     }
+    
     public void setNumero_conselho(int numero_conselho){
         this.numero_conselho = numero_conselho;
     }
