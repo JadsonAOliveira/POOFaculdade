@@ -13,7 +13,7 @@ public class AlunoAssistido extends Pessoa {
 
 	@Override
 	public String toString() {
-		return super.toString() + "AlunoAssistido [necessidadeParticular=" + necessidadeParticular + ", bolsa=" + bolsa
+		return super.toString() + " AlunoAssistido [necessidadeParticular=" + necessidadeParticular + ", bolsa=" + bolsa
 				+ ", dataInicioAssistencia=" + dataInicioAssistencia + ", dataFimAssistencia=" + dataFimAssistencia
 				+ ", assistente=" + assistente + "]";
 	}
