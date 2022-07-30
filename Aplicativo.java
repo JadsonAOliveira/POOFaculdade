@@ -12,10 +12,11 @@ public class Aplicativo {
         ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
         ArrayList<Inspetor> inspetores = new ArrayList<Inspetor>();
         ArrayList<Avaliador> avaliadores = new ArrayList<Avaliador>();
+        ArrayList<AlunoAssistido> alunosAssistidos = new ArrayList<AlunoAssistido>();
 
         String nome, dataNascimento, localNascimento;
         char sexo;
-        long cpf;
+        long cpf = 0;
 
         Menu.getMenu();
         //System.out.println(menu.getMenu());
@@ -26,10 +27,8 @@ public class Aplicativo {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Cadastrar Aluno");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Aluno aluno = new Aluno();
+                    System.out.println("Cadastrar Aluno");                
+                    Aluno aluno = new Aluno(cpf);                                                        
                     System.out.println("Nome");
                     nome = leitura.next();
                     aluno.setNome(nome);
@@ -54,9 +53,7 @@ public class Aplicativo {
                     break;
                 case 2:
                     System.out.println("Cadastrar Professor");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Professor professor = new Professor();
+                    Professor professor = new Professor(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
                     professor.setNome(nome);
@@ -77,9 +74,7 @@ public class Aplicativo {
                     break;
                 case 3:
                     System.out.println("Cadastrar Psicologo");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Psicologo psicologo = new Psicologo();
+                    Psicologo psicologo = new Psicologo(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
                     psicologo.setNome(nome);
@@ -103,9 +98,7 @@ public class Aplicativo {
                     break;
                 case 4:
                     System.out.println("Cadastrar Tecnico");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Tecnico tecnico = new Tecnico();
+                    Tecnico tecnico = new Tecnico(cpf);
                     System.out.println("Nome");
                     nome = leitura.next();
                     tecnico.setNome(nome);
@@ -131,57 +124,87 @@ public class Aplicativo {
                     tecnicos.add(tecnico); 
                     break;
                 case 5:
-                    System.out.println("Cadastrar Inspetor");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Inspetor inspetor = new Inspetor();
-                    System.out.println("Nome");
-                    nome = leitura.next();
-                    inspetor.setNome(nome);
-                    System.out.println("Sexo");
-                    sexo = leitura.next().charAt(0);
-                    inspetor.setSexo(sexo);
-                    System.out.println("Data de Nascimento");
-                    dataNascimento = leitura.next();
-                    inspetor.setDataNascimento(dataNascimento);
-                    System.out.println("Local de Nascimento");
-                    localNascimento = leitura.next();
-                    inspetor.setLocalNascimento(localNascimento);
-                    System.out.println("Cidade de atuacao");
-                    String cidade = leitura.next();
-                    inspetor.setCidade(cidade);
-                    System.out.println("Nivel");
-                    int nivel = leitura.nextInt();
-                    inspetor.setNivel(nivel);
-
-                    inspetores.add(inspetor);
-                    break;
+                	System.out.println("Cadastrar Inspetor");
+                	Inspetor inspetor = new Inspetor(cpf);
+                	System.out.println("Nome");
+                	nome = leitura.next();
+                	inspetor.setNome(nome);
+                	System.out.println("Sexo");
+                	sexo = leitura.next().charAt(0);
+                	inspetor.setSexo(sexo);
+                	System.out.println("Data de Nascimento");
+                	dataNascimento = leitura.next();
+                	inspetor.setDataNascimento(dataNascimento);
+                	System.out.println("Local de Nascimento");
+                	localNascimento = leitura.next();
+                	inspetor.setLocalNascimento(localNascimento);
+                	System.out.println("Cidade de atuacao");
+                	String cidade = leitura.next();
+                	inspetor.setCidade(cidade);
+                	System.out.println("Nivel");
+                	int nivel = leitura.nextInt();
+                	inspetor.setNivel(nivel);
+                	
+                	inspetores.add(inspetor);
+                	break;
                 case 6:
-                    System.out.println("Cadastrar Avaliador");
-                    System.out.println("Digite o CPF");
-                    cpf = leitura.nextLong();
-                    Avaliador avaliador = new Avaliador();
-                    System.out.println("Nome");
-                    nome = leitura.next();
-                    avaliador.setNome(nome);
-                    System.out.println("Sexo");
-                    sexo = leitura.next().charAt(0);
-                    avaliador.setSexo(sexo);
-                    System.out.println("Data de Nascimento");
-                    dataNascimento = leitura.next();
-                    avaliador.setDataNascimento(dataNascimento);
-                    System.out.println("Local de Nascimento");
-                    localNascimento = leitura.next();
-                    avaliador.setLocalNascimento(localNascimento);
-                    System.out.println("Quantidade de bancas");
-                    int qtd_bancas = leitura.nextInt();
-                    avaliador.setQtd_bancas(qtd_bancas);
-                    System.out.println("Area de atuacao");
-                    String area_atuacao = leitura.next();
-                    avaliador.setArea_atuacao(area_atuacao);
-
-                    avaliadores.add(avaliador);
-                    break;
+                	System.out.println("Cadastrar Avaliador");
+                	Avaliador avaliador = new Avaliador(cpf);
+                	System.out.println("Nome");
+                	nome = leitura.next();
+                	avaliador.setNome(nome);
+                	System.out.println("Sexo");
+                	sexo = leitura.next().charAt(0);
+                	avaliador.setSexo(sexo);
+                	System.out.println("Data de Nascimento");
+                	dataNascimento = leitura.next();
+                	avaliador.setDataNascimento(dataNascimento);               	
+                	System.out.println("Local de Nascimento");
+                	localNascimento = leitura.next();
+                	avaliador.setLocalNascimento(localNascimento);
+                	System.out.println("Quantidade de bancas");
+                	int qtd_bancas = leitura.nextInt();
+                	avaliador.setQtd_bancas(qtd_bancas);
+                	System.out.println("Area de atuacao");
+                	String area_atuacao = leitura.next();
+                	avaliador.setArea_atuacao(area_atuacao);
+                	
+                	avaliadores.add(avaliador);
+                	break;
+                case 7:
+                	System.out.println("Cadastrar Aluno Assistido");
+                	AlunoAssistido alunoAssistido = new AlunoAssistido(cpf);
+                	System.out.println("Nome");
+                	nome = leitura.next();
+                	alunoAssistido.setNome(nome);
+                	System.out.println("Sexo");
+                	sexo = leitura.next().charAt(0);
+                	alunoAssistido.setSexo(sexo);
+                	System.out.println("Data de Nascimento");
+                	dataNascimento = leitura.next();
+                	alunoAssistido.setDataNascimento(dataNascimento);
+                	System.out.println("Local de Nascimento");
+                	localNascimento = leitura.next();
+                	alunoAssistido.setLocalNascimento(localNascimento);
+                	System.out.println("Necessidade Particular");
+                	String necessidadeParticular = leitura.next();
+                	alunoAssistido.setNecessidadeParticular(necessidadeParticular);
+                	System.out.println("Bolsa");
+                	double bolsa = leitura.nextDouble();
+                	alunoAssistido.setBolsa(bolsa);
+                	System.out.println("Data Inicio Assistencia");
+                	String dataInicioAssistencia = leitura.next();
+                	alunoAssistido.setDataInicioAssistencia(dataInicioAssistencia);
+                	System.out.println("Data Final Assistencia");
+                	String dataFinalAssistencia = leitura.next();
+                	alunoAssistido.setDataFimAssistencia(dataFinalAssistencia);
+                	System.out.println("Assistente");
+                	String assistente = leitura.next();
+                	alunoAssistido.setAssistente(assistente);
+                	
+                	alunosAssistidos.add(alunoAssistido);
+                	break;
+                	
                 case 11:
                     System.out.println("Listar Alunos");
                     System.out.println(alunos.toString());
@@ -206,6 +229,9 @@ public class Aplicativo {
                 	System.out.println("Listar Avaliadores");
                 	System.out.println(avaliadores.toString());
                 	break;
+                case 17:
+                	System.out.println("Listar Alunos Assistidos");
+                	System.out.println(alunosAssistidos.toString());
                 case 0:
                     break;
                 default:
