@@ -10,7 +10,7 @@ public class Avaliador extends Pessoa {
 	
 	@Override
 	public String toString() {
-		return super.toString() + "Avaliador [qtd_bancas=" + qtd_bancas + ", area_atuacao=" + area_atuacao + "]";
+		return super.toString() + " Avaliador [qtd_bancas=" + qtd_bancas + ", area_atuacao=" + area_atuacao + "]";
 	}
 	public int getQtd_bancas() {
 		return qtd_bancas;
