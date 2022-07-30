@@ -15,40 +15,44 @@ public class Pessoa {
     public String toString() {
         return "Pessoa{" + "cpf=" + cpf + ", nome=" + nome + ", sexo=" + sexo + ", localNascimento=" + localNascimento + ", dataNascimento=" + dataNascimento + '}';
     }
-    
-    public void setSexo(char sexo){
-        this.sexo = sexo;
-    }
 
-    public char getsexo(){
-        return this.getSexo();
-    }
+	public long getCpf() {
+		return cpf;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public void setCpf(long cpf) {
+		this.cpf = cpf;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public char getSexo() {
-        return sexo;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getLocalNascimento() {
-        return localNascimento;
-    }
+	public char getSexo() {
+		return sexo;
+	}
 
-    public void setLocalNascimento(String localNascimento) {
-        this.localNascimento = localNascimento;
-    }
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
+	public String getLocalNascimento() {
+		return localNascimento;
+	}
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
+	public void setLocalNascimento(String localNascimento) {
+		this.localNascimento = localNascimento;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}   
 }
