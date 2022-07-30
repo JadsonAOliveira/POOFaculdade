@@ -9,7 +9,7 @@ public class Professor extends Pessoa {
 
     @Override
     public String toString() {
-        return "Professor{" + "formacao=" + formacao + '}';
+        return super.toString() + " Professor{" + "formacao=" + formacao + '}';
     }
     
     public String getFormacao() {
