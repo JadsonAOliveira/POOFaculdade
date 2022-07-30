@@ -11,7 +11,7 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "Aluno{" + "nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + '}';
+        return super.toString() + " Aluno{" + "nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + '}';
     }
 
     public double getNota1() {
